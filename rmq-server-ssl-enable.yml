@@ -4,5 +4,6 @@
   tasks:
     - name: git install
       shell: |
-        cd /local
+        cd /tmp
+        ls -lrt
         yum install -y "{{node_1}}"
