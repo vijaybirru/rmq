@@ -1,0 +1,8 @@
+- hosts: NODE
+  serial: 1
+  gather_facts: False
+  tasks:
+    - name: git install
+      shell: |
+        cd /local
+        yum install -y "{{node_1}}"
