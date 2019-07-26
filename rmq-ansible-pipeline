@@ -16,7 +16,7 @@ node {
                 export ANSIBLE_HOST_KEY_CHECKING=False
                 #ansible-playbook ${WORKSPACE}@script/ec2_yum_update_ansible.yml -s -e host_key_checking=False  -e RMQ_USER=${RMQ_USERNAME} -e RMQ_PASS=${RMQ_PASSWORD}  -i ./nodes -v
                 #ansible-playbook ${WORKSPACE}@script/rmq_install_ansible.yml -s -e host_key_checking=False  -e RMQ_USER=${RMQ_USERNAME} -e RMQ_PASS=${RMQ_PASSWORD} -i ./nodes -v
-                ansible-playbook ${WORKSPACE}@script/rmq-server-ssl-enable.yml -s -e host_key_checking=False -e node_1=$(head -1 /tmp/git.txt) -i ./nodes -v
+                ansible-playbook ${WORKSPACE}/rmq-server-ssl-enable.yml -s -e host_key_checking=False -e node_1=$(head -1 /tmp/git.txt) -i ./nodes -v
             """
 
         }
